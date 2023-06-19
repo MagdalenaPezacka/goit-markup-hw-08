@@ -16,11 +16,12 @@
 @import "./components/modal";
 @import "./components/modal-form";
 @import "./components/global";
+@import "./components/mobile-menu";
 
 body {
-	width: 1600px;
 	font-style: normal;
 	color: $almost-black;
+	min-width: 320px;
 }
 header {
 	width: 1600px;

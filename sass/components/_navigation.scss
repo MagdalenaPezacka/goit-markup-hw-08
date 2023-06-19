@@ -131,3 +131,23 @@
 		color: $brand-color;
 	}
 }
+@media #{$tablet} {
+	.main-nav {
+		&__contacts {
+			flex-direction: column;
+			justify-content: center;
+		}
+		&__phonenumber {
+			font-size: 12px;
+		}
+		&__phonenumber-icon {
+			size: calc(width-2px), (height-2px);
+		}
+		&__email-link {
+			font-size: 12px;
+		}
+		&__email-link-icon {
+			size: calc(width-2px), (height-2px);
+		}
+	}
+}
