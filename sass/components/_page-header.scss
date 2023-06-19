@@ -1,0 +1,25 @@
+.page-header {
+	display: flex;
+	width: 1200px;
+	height: 80px;
+	margin: 0 auto;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	border-bottom: 1px solid $almost-grey;
+
+	&__logo {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		font-family: "Raleway";
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 1.19;
+		color: $total-black;
+		background-color: $total-white;
+	}
+	&__logo--highlight {
+		color: $brand-color;
+	}
+}

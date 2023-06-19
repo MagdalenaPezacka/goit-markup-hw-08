@@ -1,0 +1,173 @@
+.data-form {
+	&__form-label {
+		position: relative;
+		font-size: 12px;
+		padding-bottom: 4px;
+		line-height: 1, 17;
+		letter-spacing: 0.01em;
+		color: $light-grey;
+	}
+	&__input-box {
+		position: relative;
+		display: flex;
+		top: 0;
+		left: 0;
+		width: 100%;
+		align-items: center;
+		padding-bottom: 10px;
+	}
+	&__input-box > svg {
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		margin-left: 12px;
+		transition-property: fill;
+		transition-duration: 250ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	&__textarea {
+		height: 120px;
+		font-size: 12px;
+		line-height: 1, 17;
+		letter-spacing: 0.01em;
+		padding: 12px 16px;
+		resize: none;
+		color: rgba(117, 117, 117, 0.5);
+	}
+	&__textarea::placeholder {
+		font-size: 12px;
+		line-height: 1, 17;
+		letter-spacing: 0.01em;
+		color: rgba(117, 117, 117, 0.5);
+	}
+	&__agreement {
+		position: relative;
+		top: 0;
+		left: 0;
+		display: inline-flex;
+		justify-content: center;
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+
+	.input-box {
+		&__input {
+			height: 40px;
+			width: 100%;
+			padding-left: 42px;
+			text-align: left;
+			align-items: center;
+			margin: 0;
+			border: 1px solid rgba(33, 33, 33, 0.2);
+			border-radius: 4px;
+			transition-property: border-color;
+			transition-duration: 250ms;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		&__input:focus + svg,
+		&__input:hover + svg {
+			fill: $brand-color;
+		}
+	}
+}
+.form-checkbox {
+	text-align: right;
+	font-size: 14px;
+	line-height: 1, 71;
+	letter-spacing: 0.03em;
+	color: $light-grey;
+
+	&__icon--unchecked {
+		position: absolute;
+		left: 5px;
+		scale: 1;
+	}
+	&__icon--checked {
+		position: absolute;
+		left: 5px;
+		width: 16px;
+		height: 15px;
+		background-color: $brand-color;
+		border-radius: 2px;
+		visibility: hidden;
+		scale: 0;
+		transition-property: background-color, visibility, scale;
+		transition-duration: 250ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	&__input:checked ~ &__icon--checked {
+		visibility: visible;
+		background-color: $brand-color;
+		scale: 1;
+	}
+	&__input:checked ~ &__icon--unchecked {
+		scale: 0;
+	}
+	&__link {
+		color: $brand-color;
+		text-decoration: underline;
+	}
+}
+
+.send-btn {
+	align-items: center;
+	width: 200px;
+	height: 50px;
+	margin: auto;
+	padding: 10px 41px;
+	background-color: $brand-color;
+	border: $brand-color;
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	color: $total-white;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+}
+
+.close-btn {
+	position: absolute;
+	display: block;
+	top: 8px;
+	right: 8px;
+	width: 30px;
+	height: 30px;
+	padding: 6px;
+	align-content: center;
+	background-color: $total-white;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	cursor: pointer;
+
+	&__icon {
+		width: 18px;
+		height: 18px;
+	}
+}
+.not-hidden {
+	transition-duration: 1s;
+	transition-delay: 10ms;
+	transform: scale(1);
+	opacity: 1;
+}
+.is-hidden {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.input-box__input,
+.data-form__textarea {
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	transition-property: border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-box__input:hover,
+.input-box__input:focus,
+.data-form__textarea:hover,
+.data-form__textarea:focus {
+	border-color: $brand-color;
+}

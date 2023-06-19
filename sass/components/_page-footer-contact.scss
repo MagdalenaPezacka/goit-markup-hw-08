@@ -1,0 +1,58 @@
+.footer-contact-block {
+	display: inline-block;
+	margin-right: 70px;
+
+	&__logo {
+		font-family: "Raleway";
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 1.19;
+		color: $total-white;
+		padding-top: 60px;
+		padding-bottom: 20px;
+		margin-right: 70px;
+	}
+	&__logo--highlight {
+		color: $brand-color;
+	}
+	&__address {
+		font-style: normal;
+		font-size: 14px;
+		line-height: 1.71;
+		color: $total-white;
+		padding-bottom: 9px;
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 1.71;
+		color: $middle-grey;
+		padding-bottom: 9px;
+		transition-property: color;
+		transition-duration: 250ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	&__phonenumber {
+		display: block;
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 1.71;
+		letter-spacing: 0.03em;
+		color: $middle-grey;
+		transition-property: color;
+		transition-duration: 250ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	&__link:hover,
+	&__link:focus,
+	&__link:active {
+		color: $brand-color;
+	}
+
+	&__phonenumber:hover,
+	&__phonenumber:focus,
+	&__phonenumber:active {
+		color: $brand-color;
+	}
+}
