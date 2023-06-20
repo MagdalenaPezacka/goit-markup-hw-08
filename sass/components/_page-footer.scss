@@ -8,3 +8,17 @@
 	margin: 0, auto;
 	justify-content: center;
 }
+@media #{$tablet} {
+}
+@media #{$desktop} {
+	.footer-container {
+		background-color: $dark-grey;
+		width: 1600px;
+		margin: 0 auto;
+	}
+	.page-footer__blocks {
+		display: flex;
+		margin: 0, auto;
+		justify-content: center;
+	}
+}

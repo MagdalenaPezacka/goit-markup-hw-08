@@ -1,11 +1,11 @@
 .team {
 	background-color: $almost-white;
-	width: 1200px;
-	margin: 0 auto;
+	width: 90%;
+	margin: auto;
 
 	&__subtitle {
 		font-weight: 700;
-		font-size: 36px;
+		font-size: 28px;
 		line-height: 1.17;
 		text-align: center;
 		color: $almost-black;
@@ -24,7 +24,7 @@
 .team-part {
 	background-color: $total-white;
 	margin: 0 auto;
-	width: 270px;
+	max-width: 270px;
 	height: 428px;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -78,5 +78,107 @@
 	&__social-icons:hover > &__socialmedia,
 	&__social-icons:focus > &__socialmedia {
 		fill: $total-white;
+	}
+}
+@media #{$tablet} {
+	.team {
+		display: flex;
+		justify-content: space-center;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+	.team-part {
+		min-width: calc(100% / 2 - 2 * 10px);
+	}
+	/*&__box {
+			max-width: 354px;
+		}
+		&__text {
+			max-width: 354px;
+		}*/
+}
+
+@media #{$desktop} {
+	.team {
+		background-color: $almost-white;
+		width: 1200px;
+		margin: 0 auto;
+
+		&__subtitle {
+			font-weight: 700;
+			font-size: 36px;
+			line-height: 1.17;
+			text-align: center;
+			color: $almost-black;
+			padding-bottom: 50px;
+			margin: 0;
+		}
+		&__members {
+			display: flex;
+			margin: 0 auto;
+			width: 1200px;
+			justify-content: center;
+			gap: 30px;
+			padding-left: 0;
+		}
+	}
+	.team-part {
+		background-color: $total-white;
+		margin: 0 auto;
+		width: 270px;
+		height: 428px;
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+			0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+		border-radius: 0px 0px 4px 4px;
+
+		&__name {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 1.19;
+			color: $almost-black;
+			margin: 0 auto;
+			padding-top: 30px;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+		&__position {
+			font-size: 16px;
+			line-height: 1.19;
+			color: $light-grey;
+			text-align: center;
+			margin: 0 auto;
+			padding-bottom: 16px;
+		}
+		&__social-boxes {
+			display: flex;
+			margin: auto;
+			margin-bottom: 18px;
+			padding-bottom: 0;
+			max-width: 206px;
+			max-height: 56px;
+			justify-content: space-around;
+			gap: 10px;
+		}
+		&__social-icons {
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			cursor: pointer;
+			transition-property: background-color, fill;
+			transition-duration: 250ms;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		&__socialmedia {
+			margin: 12px;
+			fill: $icon-border;
+		}
+		&__social-icons:hover,
+		&__social-icons:focus {
+			background-color: $brand-color;
+		}
+		&__social-icons:hover > &__socialmedia,
+		&__social-icons:focus > &__socialmedia {
+			fill: $total-white;
+		}
 	}
 }

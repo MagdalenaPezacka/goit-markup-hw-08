@@ -1,6 +1,5 @@
 .main-nav {
-	display: inline-flex;
-
+	display: flex;
 	&__link {
 		text-decoration: none;
 	}
@@ -130,7 +129,33 @@
 	&__phonenumber-icon:focus {
 		color: $brand-color;
 	}
+
+	&__toggle {
+		min-height: 40px;
+		min-width: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
+		cursor: pointer;
+		border: none;
+		border-radius: 50%;
+		outline: none;
+	}
+	&__toggle:hover,
+	&__toggle:focus {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
 }
+@media (min-width: 480px) {
+	.main-nav__toggle {
+		display: none;
+	}
+}
+
 @media #{$tablet} {
 	.main-nav {
 		&__contacts {
@@ -148,6 +173,141 @@
 		}
 		&__email-link-icon {
 			size: calc(width-2px), (height-2px);
+		}
+	}
+}
+@media #{$desktop} {
+	.main-nav {
+		display: inline-flex;
+
+		&__link {
+			text-decoration: none;
+		}
+
+		&__list {
+			display: flex;
+			max-height: 80px;
+			justify-content: space-around;
+			align-content: center;
+			list-style-type: none;
+			gap: 46px;
+			margin-top: 0px;
+			margin-left: 93px;
+			margin-right: 371px;
+			margin-bottom: 0px;
+			padding-left: 0;
+		}
+
+		&__link {
+			display: inline-block;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 1.14;
+			color: $almost-black;
+			margin-top: 0;
+			padding-top: 32px;
+			padding-bottom: 28px;
+			transition-property: color;
+			transition-duration: 250ms;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		&__link:hover,
+		&__link:focus,
+		&__link:active {
+			color: $brand-color;
+		}
+
+		&__list .is-active::after {
+			content: "";
+			display: block;
+			width: auto;
+			height: 4px;
+			margin-bottom: 28px;
+			border-radius: 2px;
+			background-color: $brand-color;
+		}
+
+		&__contacts {
+			display: flex;
+			padding: 0;
+			margin: 0;
+			justify-content: space-around;
+			align-items: center;
+			gap: 30px;
+		}
+
+		&__email-link-icon {
+			margin-right: 10px;
+			fill: currentColor;
+			cursor: pointer;
+			transition-property: color;
+			transition-duration: 250ms;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		&__email-link-icon:hover,
+		&__email-link-icon:focus {
+			color: $brand-color;
+		}
+
+		&__email-link {
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 1.14;
+			color: $light-grey;
+			letter-spacing: 0.02em;
+			width: 161px;
+			height: 16px;
+			cursor: pointer;
+			transition-property: color;
+			transition-duration: 250ms;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		&__email-link:hover,
+		&__email-link:focus {
+			color: $brand-color;
+		}
+		&__phonenumber {
+			display: flex;
+			align-items: center;
+			flex-wrap: nowrap;
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 1.14;
+			color: $light-grey;
+			letter-spacing: 0.02em;
+			width: 130px;
+			height: 16px;
+			cursor: pointer;
+			transition-property: color;
+			transition-duration: 250ms;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		&__phonenumber-icon {
+			margin-right: 10px;
+			max-width: 10px;
+			fill: currentColor;
+			cursor: pointer;
+			transition-property: color;
+			transition-duration: 250ms;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		&__phonenumber:hover,
+		&__phonenumber:focus,
+		&__phonenumber:active {
+			color: $brand-color;
+		}
+
+		&__phonenumber-icon:hover,
+		&__phonenumber-icon:focus {
+			color: $brand-color;
 		}
 	}
 }

@@ -1,7 +1,14 @@
 .articles {
-	margin: 0 auto;
-	padding-top: 60px;
-
+	width: 90%;
+	margin: auto;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	/*&__item {
+		max-width: calc(90% - 2 * 15px);
+		margin: 0 auto 15px;
+		text-align: center;
+		line-height: 50px;
+	}*/
 	&__box {
 		width: 450px;
 		height: 120px;
@@ -22,8 +29,10 @@
 		color: $almost-black;
 	}
 	&__text {
+		max-width: 354px;
 		margin: 0;
 		font-size: 14px;
+		text-align: left;
 		line-height: 1.71;
 		letter-spacing: 0.03em;
 		color: $light-grey;
@@ -32,13 +41,33 @@
 @media #{$tablet} {
 	.articles {
 		display: flex;
+		justify-content: space-center;
 		flex-wrap: wrap;
 		gap: 30px;
+		&__item {
+			min-width: calc(100% / 2 - 2 * 10px);
+		}
 		&__box {
+			max-width: 354px;
+		}
+		&__text {
 			max-width: 354px;
 		}
 	}
 }
+/*{
+    display: flex;
+    justify-content: space-center;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 0 15px 15px;
+   / Napisz kod pod tym wierszem /
+min-width: var(--tablet);
+/**/
+
 @media #{$desktop} {
 	.articles {
 		display: flex;
