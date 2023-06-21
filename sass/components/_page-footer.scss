@@ -1,11 +1,12 @@
 .footer-container {
 	background-color: $dark-grey;
-	width: 1600px;
+	width: 100vw;
 	margin: 0 auto;
 }
 .page-footer__blocks {
 	display: flex;
-	margin: 0, auto;
+	flex-direction: column;
+	margin: auto;
 	justify-content: center;
 }
 @media #{$tablet} {

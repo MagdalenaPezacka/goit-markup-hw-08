@@ -1,9 +1,10 @@
 .team {
 	background-color: $almost-white;
-	width: 90%;
-	margin: auto;
+	width: 100vw;
+	margin: 0 auto;
 
 	&__subtitle {
+		max-width: calc(100% - 2 * 15px);
 		font-weight: 700;
 		font-size: 28px;
 		line-height: 1.17;
@@ -13,9 +14,11 @@
 		margin: 0;
 	}
 	&__members {
+		max-width: calc(100% - 2 * 15px);
 		display: flex;
+		flex-wrap: wrap;
 		margin: 0 auto;
-		width: 1200px;
+
 		justify-content: center;
 		gap: 30px;
 		padding-left: 0;
@@ -23,8 +26,9 @@
 }
 .team-part {
 	background-color: $total-white;
+
 	margin: 0 auto;
-	max-width: 270px;
+	max-width: calc(100% - 2 * 15px);
 	height: 428px;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -41,6 +45,7 @@
 		text-align: center;
 	}
 	&__position {
+		font-weight: 400;
 		font-size: 16px;
 		line-height: 1.19;
 		color: $light-grey;

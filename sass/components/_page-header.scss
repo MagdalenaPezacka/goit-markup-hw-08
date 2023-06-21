@@ -1,8 +1,15 @@
+/*@media (min-width: 320px) {
+	.page-header__toggle {
+		position: absolute;
+		display: inline-block;
+	}
+}*/
 .page-header {
 	display: flex;
-	width: 1200px;
-	height: 80px;
-	margin: 0 auto;
+	min-width: 320px;
+	width: 100vw;
+	height: 60px;
+	margin: auto;
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
@@ -11,7 +18,7 @@
 	&__logo {
 		display: inline-block;
 		margin: 0;
-		padding-left: 16px;
+		padding-left: 15px;
 		font-family: "Raleway";
 		font-weight: 700;
 		font-size: 24px;
@@ -22,13 +29,52 @@
 	&__logo--highlight {
 		color: $brand-color;
 	}
+
+	&__toggle {
+		display: inline-block;
+		min-height: 40px;
+		min-width: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
+		cursor: pointer;
+		border: none;
+		border-radius: 50%;
+		outline: none;
+	}
+	&__toggle:hover,
+	&__toggle:focus {
+		fill: $brand-color;
+	}
 }
 
 @media #{$desktop} {
 	.page-header {
+		display: flex;
+		width: 1200px;
+		height: 80px;
+		margin: 0 auto;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+		border-bottom: 1px solid $almost-grey;
 		&__logo {
+			display: inline-block;
+			margin: 0;
+			padding-left: 16px;
+			font-family: "Raleway";
+			font-weight: 700;
 			font-size: 26px;
 			padding: 0;
+			line-height: 1.19;
+			color: $total-black;
+			background-color: $total-white;
+		}
+		&__logo--highlight {
+			color: $brand-color;
 		}
 	}
 }

@@ -17,14 +17,3 @@
 @import "./components/modal-form";
 @import "./components/global";
 @import "./components/mobile-menu";
-
-body {
-	font-style: normal;
-	color: $almost-black;
-	min-width: 320px;
-}
-
-.section {
-	padding-top: 94px;
-	padding-bottom: 94px;
-}
