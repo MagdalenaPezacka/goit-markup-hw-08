@@ -5,7 +5,6 @@
 	}
 }*/
 .page-header {
-	display: flex;
 	min-width: 320px;
 	width: 100vw;
 	height: 60px;
@@ -13,8 +12,13 @@
 	justify-content: space-between;
 	flex-direction: row;
 	align-items: center;
+	text-align: center;
 	border-bottom: 1px solid $almost-grey;
 
+	&__left-side {
+		display: inline-flex;
+		padding-left: 5px;
+	}
 	&__logo {
 		display: inline-block;
 		margin: 0;
@@ -50,7 +54,9 @@
 		fill: $brand-color;
 	}
 }
-
+.logo {
+	text-decoration: none;
+}
 @media #{$desktop} {
 	.page-header {
 		display: flex;
