@@ -32,12 +32,10 @@
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
 	&__photo {
-		img {
-			display: block;
-			max-width: 100%;
-			width: 100%;
-			height: auto;
-		}
+		display: block;
+		max-width: 100%;
+		width: 100%;
+		height: auto;
 	}
 	&__name {
 		font-weight: 500;
@@ -61,11 +59,10 @@
 	&__social-boxes {
 		display: flex;
 		margin: auto;
-		margin-bottom: 18px;
-		padding-bottom: 0;
+		padding-bottom: 16px;
 		max-width: 206px;
 		max-height: 56px;
-		justify-content: space-around;
+		justify-content: center;
 		gap: 10px;
 	}
 	&__social-icons {

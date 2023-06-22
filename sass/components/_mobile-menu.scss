@@ -1,3 +1,73 @@
+.menu-container.is-open {
+	transform: translateX(0);
+}
+
+.menu-container {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: $total-white;
+	transform: translateX(100%);
+	transition-duration: 250ms;
+	&__close-btn {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		background-color: transparent;
+		border: none;
+	}
+	&__mobile-conact {
+		display: flex;
+		flex-direction: column;
+	}
+}
+/*menu-containerr{top: 50%;
+	left: 50%;
+	width: 100%;
+	min-height: 100%;
+	place-items: center;
+	transform: translate(-50%, -50%);
+	
+
+	border-radius: 4px;}*/
+
+.menu-container .menu-toggle {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	color: $total-black;
+}
+
+.mobile-menu {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.mobile-menu .link {
+	display: block;
+	padding: 10px;
+	color: $total-black;
+	text-decoration: none;
+}
+
+.menu-container__close-btn:hover,
+.menu-container__close-btn:focus {
+	fill: $brand-color;
+}
+/*.not-hidden {
+	transition-duration: 1s;
+	transition-delay: 10ms;
+	transform: scale(1);
+	opacity: 1;
+} 
+.is-hidden {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}*/
 /*.menu {
 	display: flex;
 	width: 100%;
@@ -23,7 +93,8 @@
 	text-decoration: underline;
 }
 */
-.main-nav__toggle {
+.menu-toggle {
+	display: inline-block;
 	min-height: 40px;
 	min-width: 40px;
 	display: flex;
@@ -39,65 +110,16 @@
 	outline: none;
 }
 
+.menu-toggle:hover,
+.menu-toggle:focus {
+	fill: $brand-color;
+}
 @media (min-width: 480px) {
-	.main-nav__toggle {
+	.menu-toggle {
 		display: none;
 	}
 }
 
-.main-nav__toggle:hover,
-.main-nav__toggle:focus {
-	background-color: rgba(0, 0, 0, 0.1);
-}
-
-.menu-container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 100%;
-	min-height: 100%;
-	place-items: center;
-	transform: translate(-50%, -50%);
-	background: $total-white;
-
-	border-radius: 4px;
-}
-
-.menu-container.is-open {
-	transform: scale(1);
-}
-
-.menu-container .page-header__toggle {
-	position: absolute;
-	top: 16px;
-	right: 16px;
-	color: $total-black;
-}
-
-.mobile-menu {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.mobile-menu .link {
-	display: block;
-	padding: 10px;
-	color: $total-black;
-	text-decoration: none;
-}
-.close-btn__icon:hover,
-.close-btn__icon:focus {
-	color: $brand-color;
-}
-/*.not-hidden {
-	transition-duration: 1s;
-	transition-delay: 10ms;
-	transform: scale(1);
-	opacity: 1;
-} 
-.is-hidden {
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none;
+/*.menu-toggle-btn {
+	
 }*/
