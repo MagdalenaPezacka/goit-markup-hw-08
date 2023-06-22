@@ -22,7 +22,7 @@
 		justify-content: center;
 		gap: 12px;
 		padding-left: 0;
-
+		align-items: center;
 		&__newsletter-email-box {
 			display: flex;
 			max-width: calc(100% - 2 * 15px);
@@ -30,7 +30,7 @@
 			margin: 0;
 			padding: 0;
 		}
-		&__newsletter-email-box input[type="email"] {
+		&__newsletter-email-box {
 			width: 100%;
 			background-color: $dark-grey;
 			padding-left: 16px;
@@ -49,9 +49,9 @@
 		}
 	}
 	.newsletter-btn {
-		display: inline-block;
+		display: flex;
+		justify-content: center;
 		align-items: center;
-		justify-content: space-around;
 		width: 200px;
 		height: 50px;
 		gap: 24px;
