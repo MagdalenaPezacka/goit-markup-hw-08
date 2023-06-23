@@ -17,12 +17,17 @@
 		right: 15px;
 		background-color: transparent;
 		border: none;
+		&__:focus,
+		&__:hover {
+			fill: $brand-color;
+		}
 	}
 	&__mobile-conact {
 		display: flex;
 		flex-direction: column;
 	}
 }
+
 /*menu-containerr{top: 50%;
 	left: 50%;
 	width: 100%;
@@ -90,7 +95,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 	margin: 0;
 	padding: 0;
 	background-color: transparent;
@@ -104,7 +108,7 @@
 .menu-toggle:focus {
 	fill: $brand-color;
 }
-@media (min-width: 480px) {
+/*@media (min-width: 480px) {
 	.menu-toggle {
 		display: none;
 	}
