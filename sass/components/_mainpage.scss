@@ -10,7 +10,7 @@
 	background-image: url(../images/studio.jpg);
 	background-position: center;
 	background-size: cover;
-	height: 400px;
+	height: auto;
 	&__shade {
 		width: 100%;
 		background-color: $shade;
@@ -54,7 +54,6 @@
 @media #{$desktop} {
 	.mainpage {
 		max-width: 1600px;
-		height: 600px;
 
 		&__shade {
 			width: 100%;
@@ -63,7 +62,7 @@
 			flex-direction: column;
 			align-items: center;
 			padding-bottom: 200px;
-			height: 600px;
+			height: auto;
 		}
 		&__title {
 			margin: 0;

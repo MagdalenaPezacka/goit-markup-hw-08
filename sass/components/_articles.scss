@@ -1,26 +1,25 @@
 .articles {
-	width: 100vw;
+	display: flex;
+	width: 100%;
+	gap: 30px;
+	flex-wrap: wrap;
+	text-align: left;
+	padding-left: 0;
 
-	margin-top: 60px;
-	margin-bottom: 60px;
-	/*&__item {
-		max-width: calc(90% - 2 * 15px);
-		margin: 0 auto 15px;
-		text-align: center;
-		line-height: 50px;
-	}*/
 	&__box {
-		max-width: calc(100% - 2 * 15px);
+		display: flex;
+		width: 100%;
 		height: 120px;
-		padding: 25px 100px;
+		padding: 25px 0;
 		margin-bottom: 30px;
 		border-radius: 4px;
+		justify-content: center;
 		background-color: $almost-white;
 		background-repeat: no-repeat;
 		background-size: contain;
 	}
 	&__title {
-		max-width: calc(90% - 2 * 15px);
+		width: 100%;
 		padding-bottom: 10px;
 		font-weight: 700;
 		font-size: 14px;
@@ -30,14 +29,13 @@
 		color: $almost-black;
 	}
 	&__text {
-		max-width: calc(90% - 2 * 15px);
-		margin: 0;
+		width: 100%;
+		margin-top: 10px;
 		font-size: 14px;
-		text-align: justify;
+		text-align: left;
 		line-height: 1.71;
 		letter-spacing: 0.03em;
 		color: $light-grey;
-		padding-bottom: 30px;
 	}
 }
 @media #{$tablet} {
