@@ -11,7 +11,10 @@
 }
 @media #{$tablet} {
 	.page-footer__blocks {
-		display: flexbox;
+		margin: 0 auto;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 }
 @media #{$desktop} {

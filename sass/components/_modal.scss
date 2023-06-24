@@ -13,7 +13,7 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: calc(100% - 2 * 15px);
+		width: 450px;
 		height: 609px;
 		place-items: center;
 		transform: translate(-50%, -50%);
@@ -30,6 +30,9 @@
 }
 .modal form input[type="checkbox"] {
 	display: none;
+}
+
+@media #{$tablet} {
 }
 /*.backdrop {
 	position: fixed;

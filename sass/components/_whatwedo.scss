@@ -29,7 +29,13 @@
 		margin: 0;
 		top: 0;
 		overflow: hidden;
-
+		@media (-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background: url(../images/whatwedo/computerDesktop@x2.jpg);
+			background: url(../images/whatwedo/mobileDesktop@x2.jpg);
+			background: url(../images/whatwedo/graficDesktop@x2.jpg);
+		}
 		& > &__text {
 			position: absolute;
 			width: 370px;

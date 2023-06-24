@@ -171,7 +171,8 @@
 							<div class="whatwedo__item wedo-box">
 								<img
 									class="wedo-box__item"
-									src="./images/img1.jpg"
+									src="./images/whatwedo/computerDesktop@x1.jpg"
+									srcset="./images/whatwedo/computerDesktop@x2.jpg x2"
 									alt="Hands on keyboard coding in front of monitor"
 									width="370"
 									height="294"
@@ -185,7 +186,8 @@
 							<div class="whatwedo__item wedo-box">
 								<img
 									class="wedo-box__item"
-									src="./images/img2.jpg"
+									src="./images/whatwedo/mobileDesktop@x1.jpg"
+									srcset="./images/whatwedo/mobileDesktop@x2.jpg x2"
 									alt="Phone holding on hand in front of computer"
 									width="370"
 									height="294"
@@ -197,7 +199,8 @@
 							<div class="whatwedo__item wedo-box">
 								<img
 									class="wedo-box__item"
-									src="./images/img3.jpg"
+									src="./images/whatwedo/graficDesktop@x1.jpg"
+									srcset="./images/whatwedo/graficDesktop@x2.jpg x2"
 									alt="Checking colors on tablet"
 									width="370"
 									height="294"
@@ -216,14 +219,34 @@
 					<ul class="team__members">
 						<li>
 							<figure class="team-part">
-								<img
-									class="team-part__photo"
-									src="./images/team/member1Mobile@x1.jpg"
-									srcset="./images/team/member1Mobile@x2.jpg x2"
-									alt="Man in brown shirt is smiling"
-									width="270"
-									height="260"
-								/>
+								<picture class="team-part__photo">
+									<source
+										media="(min-width: 900px)"
+										srcset="
+											./images/team/member1Desktop@x1.jpg 1x,
+											./images/team/member1Desktop@x2.jpg 2x
+										"
+									/>
+									<source
+										media="(min-width: 601px)"
+										srcset="
+											./images/team/member1Tablet@x1.jpg 1x,
+											./images/team/member1Tablet@x2.jpg 2x
+										"
+									/>
+									<source
+										media="(max-width: 600px)"
+										srcset="
+											./images/team/member1Mobile@x1.jpg 1x,
+											./images/team/member1Mobile@x2.jpg 2x
+										"
+									/>
+									<img
+										src="./images/team/member1Mobile@x1.jpg"
+										type="jpg"
+										alt="Man in brown shirt is smiling"
+									/>
+								</picture>
 								<figcaption>
 									<p class="team-part__name">John Doe</p>
 									<p class="team-part__position">
@@ -280,14 +303,34 @@
 						</li>
 						<li>
 							<figure class="team-part">
-								<img
-									class="team-part__photo"
-									src="./images/team/member2Mobile@x1.jpg"
-									srcset="./images/team/member2Mobile@x2.jpg x2"
-									alt="Blond women with glasses is smiling"
-									width="270"
-									height="260"
-								/>
+								<picture class="team-part__photo">
+									<source
+										media="(min-width: 900px)"
+										srcset="
+											./images/team/member2Desktop@x1.jpg 1x,
+											./images/team/member2Desktop@x2.jpg 2x
+										"
+									/>
+									<source
+										media="(min-width: 601px)"
+										srcset="
+											./images/team/member2Tablet@x1.jpg 1x,
+											./images/team/member2Tablet@x2.jpg 2x
+										"
+									/>
+									<source
+										media="(max-width: 600px)"
+										srcset="
+											./images/team/member2Mobile@x1.jpg 1x,
+											./images/team/member2Mobile@x2.jpg 2x
+										"
+									/>
+									<img
+										src="./images/team/member2Mobile@x1.jpg"
+										type="jpg"
+										alt="Blond women with glasses is smiling"
+									/>
+								</picture>
 								<figcaption>
 									<p class="team-part__name">John Doe</p>
 									<p class="team-part__position">
@@ -344,14 +387,34 @@
 						</li>
 						<li>
 							<figure class="team-part">
-								<img
-									class="team-part__photo"
-									src="./images/team/member3Mobile@x1.jpg"
-									srcset="./images/team/member3Mobile@x2.jpg x2"
-									alt="Man in blue shirt is smiling"
-									width="270"
-									height="260"
-								/>
+								<picture class="team-part__photo">
+									<source
+										media="(min-width: 900px)"
+										srcset="
+											./images/team/member3Desktop@x1.jpg 1x,
+											./images/team/member3Desktop@x2.jpg 2x
+										"
+									/>
+									<source
+										media="(min-width: 601px)"
+										srcset="
+											./images/team/member3Tablet@x1.jpg 1x,
+											./images/team/member3Tablet@x2.jpg 2x
+										"
+									/>
+									<source
+										media="(max-width: 600px)"
+										srcset="
+											./images/team/member3Mobile@x1.jpg 1x,
+											./images/team/member3Mobile@x2.jpg 2x
+										"
+									/>
+									<img
+										src="./images/team/member3Mobile@x1.jpg"
+										type="jpg"
+										alt="Man in blue shirt is smiling"
+									/>
+								</picture>
 								<figcaption>
 									<p class="team-part__name">John Doe</p>
 									<p class="team-part__position">Marketing</p>
@@ -406,14 +469,34 @@
 						</li>
 						<li>
 							<figure class="team-part">
-								<img
-									class="team-part__photo"
-									src="./images/team/member4Mobile@x1.jpg"
-									srcset="./images/team/member4Mobile@x2.jpg x2"
-									alt="Man in blach T-shirt is smiling"
-									width="270"
-									height="260"
-								/>
+								<picture class="team-part__photo">
+									<source
+										media="(min-width: 900px)"
+										srcset="
+											./images/team/member4Desktop@x1.jpg 1x,
+											./images/team/member4Desktop@x2.jpg 2x
+										"
+									/>
+									<source
+										media="(min-width: 601px)"
+										srcset="
+											./images/team/member4Tablet@x1.jpg 1x,
+											./images/team/member4Tablet@x2.jpg 2x
+										"
+									/>
+									<source
+										media="(max-width: 600px)"
+										srcset="
+											./images/team/member4Mobile@x1.jpg 1x,
+											./images/team/member4Mobile@x2.jpg 2x
+										"
+									/>
+									<img
+										src="./images/team/member4Mobile@x1.jpg"
+										type="jpg"
+										alt="Man in black T-shirt is smiling"
+									/>
+								</picture>
 								<figcaption>
 									<p class="team-part__name">John Doe</p>
 									<p class="team-part__position">

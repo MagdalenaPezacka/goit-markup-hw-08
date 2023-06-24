@@ -1,4 +1,4 @@
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
 	.main-nav {
 		display: none;
 	}
@@ -7,10 +7,17 @@
 	.contacts {
 		display: none;
 	}
+}*/
+.main-nav {
+	display: none;
 }
+.contacts {
+	display: none;
+}
+
 @media #{$tablet} {
 	.main-nav {
-		display: flex;
+		display: block;
 		margin-left: 83px;
 		flex-direction: row;
 		&__list {
@@ -140,7 +147,7 @@
 }*/
 @media #{$tablet} {
 	.contacts {
-		display: flex;
+		display: block;
 		flex-direction: column;
 		gap: 10px;
 		justify-content: left;
