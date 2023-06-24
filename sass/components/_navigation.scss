@@ -1,70 +1,69 @@
-@media (min-width: 480px) {
+@media (max-width: 480px) {
 	.main-nav {
 		display: none;
 	}
 }
-@media (min-width: 480px) {
+@media (max-width: 480px) {
 	.contacts {
 		display: none;
 	}
 }
-.main-nav {
-	display: none;
-	&__link {
-		text-decoration: none;
-	}
-
-	&__list {
-		display: flex;
-		max-height: 80px;
-		justify-content: space-around;
-		align-content: center;
-		list-style-type: none;
-		gap: 46px;
-		margin-top: 0px;
-		margin-left: 93px;
-		margin-right: 371px;
-		margin-bottom: 0px;
-		padding-left: 0;
-	}
-
-	&__link {
+@media #{$tablet} {
+	.main-nav {
 		display: inline-block;
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 1.14;
-		color: $almost-black;
-		margin-top: 0;
-		padding-top: 32px;
-		padding-bottom: 28px;
-		transition-property: color;
-		transition-duration: 250ms;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	}
+		flex-direction: row;
+		&__list {
+			display: flex;
+			max-height: 80px;
+			justify-content: space-around;
+			align-content: center;
+			list-style-type: none;
+			gap: 46px;
+			margin-top: 0px;
+			margin-left: 93px;
+			margin-right: 371px;
+			margin-bottom: 0px;
+			padding-left: 0;
+		}
 
-	&__link:hover,
-	&__link:focus,
-	&__link:active {
-		color: $brand-color;
-	}
+		&__link {
+			display: inline-block;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 1.14;
+			color: $almost-black;
+			margin-top: 0;
+			padding-top: 32px;
+			padding-bottom: 28px;
+			text-decoration: none;
+			transition-property: color;
+			transition-duration: 250ms;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		}
 
-	&__list .is-active::after {
-		content: "";
-		display: block;
-		width: auto;
-		height: 4px;
-		margin-bottom: 28px;
-		border-radius: 2px;
-		background-color: $brand-color;
+		&__link:hover,
+		&__link:focus,
+		&__link:active {
+			color: $brand-color;
+		}
+
+		&__list .is-active::after {
+			content: "";
+			display: block;
+			width: auto;
+			height: 4px;
+			margin-bottom: 28px;
+			border-radius: 2px;
+			background-color: $brand-color;
+		}
 	}
 }
-.contacts {
-	display: none;
-	padding: 0;
-	margin: 0;
+/*.contacts {
+	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	gap: 30px;
+	gap: 10px;
 	&__email-link-icon {
 		margin-right: 10px;
 		fill: currentColor;
@@ -137,7 +136,7 @@
 	&__phonenumber-icon:focus {
 		color: $brand-color;
 	}
-}
+}*/
 @media #{$tablet} {
 	.contacts {
 		flex-direction: column;

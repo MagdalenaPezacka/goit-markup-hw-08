@@ -1,6 +1,6 @@
 .footer-container {
 	background-color: $dark-grey;
-	width: 100vw;
+	width: 100%;
 	margin: 0 auto;
 }
 .page-footer__blocks {
@@ -10,6 +10,9 @@
 	justify-content: center;
 }
 @media #{$tablet} {
+	.page-footer__blocks {
+		display: flexbox;
+	}
 }
 @media #{$desktop} {
 	.footer-container {

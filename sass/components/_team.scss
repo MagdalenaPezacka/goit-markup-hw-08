@@ -94,9 +94,10 @@
 		justify-content: space-center;
 		flex-wrap: wrap;
 		gap: 30px;
-	}
-	.team-part {
-		min-width: calc(100% / 2 - 2 * 15px);
+
+		&__members {
+			min-width: calc(100% / 2 - 2 * 15px);
+		}
 	}
 	/*&__box {
 			max-width: 354px;

@@ -24,8 +24,7 @@
 		width: 70%;
 		margin: 0 auto;
 		padding-top: 118px;
-
-		padding-bottom: 30px;
+		padding-bottom: 198px;
 		font-weight: 900;
 		font-size: 26px;
 		text-align: center;
@@ -36,6 +35,8 @@
 	}
 
 	&__button {
+		position: absolute;
+		top: 35%;
 		align-items: center;
 		margin: 0 auto;
 		padding: 10px 41px 10px 41px;
@@ -51,6 +52,9 @@
 	}
 }
 @media #{$tablet} {
+	.mainpage &__title {
+		width: 70%;
+	}
 }
 @media #{$desktop} {
 	.mainpage {
