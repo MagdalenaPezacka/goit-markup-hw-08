@@ -2,30 +2,26 @@
 	background-color: $dark-grey;
 	width: 100%;
 	margin: 0 auto;
+	height: auto;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 .page-footer__blocks {
 	display: flex;
 	flex-direction: column;
-	margin: auto;
+	margin: 0 auto;
 	justify-content: center;
 }
 @media #{$tablet} {
 	.page-footer__blocks {
-		margin: 0 auto;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 }
 @media #{$desktop} {
-	.footer-container {
-		background-color: $dark-grey;
-		width: 1600px;
-		margin: 0 auto;
-	}
 	.page-footer__blocks {
 		display: flex;
-		margin: 0, auto;
-		justify-content: center;
+		flex-direction: row;
 	}
 }

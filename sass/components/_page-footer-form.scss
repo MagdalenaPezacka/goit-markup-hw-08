@@ -1,17 +1,18 @@
 .footer-newsletter-block {
 	display: block;
-	flex-direction: column;
-	margin: 72px 0 94px 0;
+	margin: 0 auto;
+	padding-top: 60px;
 	justify-items: center;
 	text-align: center;
 
 	&__subtitle {
+		font-family: "Roboto";
 		font-size: 14px;
 		font-weight: 700;
 		line-height: 1.17;
+		letter-spacing: 0.42px;
 		text-transform: uppercase;
 		color: $total-white;
-		margin: 0 auto;
 		padding-bottom: 20px;
 	}
 
@@ -20,13 +21,11 @@
 		flex-direction: column;
 		max-width: 100%;
 		justify-content: center;
-		gap: 12px;
-		padding-left: 0;
 		align-items: center;
+		gap: 20px;
 		&__newsletter-email-box {
-			width: 100%;
+			width: 450px;
 			height: 50px;
-			margin: 0;
 			padding-left: 16px;
 			background-color: $dark-grey;
 			border: 1px solid rgba(255, 255, 255, 0.3);
@@ -35,10 +34,10 @@
 		}
 
 		&__newsletter-email-box input::placeholder {
+			font-family: "Roboto";
 			font-size: 16px;
 			line-height: 1.25;
-			align-items: center;
-			letter-spacing: 0.03em;
+			letter-spacing: 0.48px;
 			color: $middle-grey;
 		}
 	}
@@ -56,62 +55,33 @@
 		cursor: pointer;
 
 		&__text {
-			margin: 0;
+			font-family: "Roboto";
 			color: $total-white;
 			font-weight: 700;
 			font-size: 16px;
 			line-height: 1.88;
-			align-items: center;
 			text-align: center;
-			letter-spacing: 0.06em;
+			letter-spacing: 0.96px;
 		}
 		&__append {
 			max-width: 24px;
 		}
 	}
 }
-@media #{$tablet} {
-}
+
 @media #{$desktop} {
 	.footer-newsletter-block {
-		display: inline-flexbox;
-		margin: 72px 0 94px 0;
-		width: 570px;
-		height: 86px;
-
+		padding-top: 12px;
 		&__subtitle {
-			font-size: 14px;
-			font-weight: 700;
-			line-height: 1.17;
-			text-transform: uppercase;
-			color: $total-white;
-			margin: 0 auto;
-			padding-bottom: 20px;
+			text-align: left;
 		}
-
 		.newsletter-form {
 			display: flex;
-			max-width: 100%;
-			justify-content: space-between;
+			flex-direction: row;
 			gap: 12px;
-			padding-left: 0;
-
 			&__newsletter-email-box {
-				display: inline-flex;
 				width: 358px;
-				height: 50px;
-				margin: 0;
-				padding: 0;
 			}
-			&__newsletter-email-box input[type="email"] {
-				width: 100%;
-				background-color: $dark-grey;
-				padding-left: 16px;
-				border: 1px solid rgba(255, 255, 255, 0.3);
-				filter: drop-shadow $shadow;
-				border-radius: 4px;
-			}
-
 			&__newsletter-email-box input::placeholder {
 				font-size: 16px;
 				line-height: 1.25;
@@ -119,33 +89,6 @@
 				align-items: center;
 				letter-spacing: 0.03em;
 				color: $middle-grey;
-			}
-		}
-		.newsletter-btn {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			width: 200px;
-			height: 50px;
-			gap: 24px;
-			background-color: $brand-color;
-			border: $brand-color;
-			border-radius: 4px;
-			box-shadow: $shadow;
-			cursor: pointer;
-
-			&__text {
-				margin: 0;
-				color: $total-white;
-				font-weight: 700;
-				font-size: 16px;
-				line-height: 1.88;
-				align-items: center;
-				text-align: center;
-				letter-spacing: 0.06em;
-			}
-			&__append {
-				max-width: 24px;
 			}
 		}
 	}

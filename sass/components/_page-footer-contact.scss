@@ -1,14 +1,14 @@
 .footer-contact-block {
 	display: block;
-	margin: auto;
+	margin: 0 auto;
 	text-align: center;
 	&__logo {
 		font-family: "Raleway";
 		font-weight: 700;
-		font-size: 26px;
+		font-size: 24px;
 		line-height: 1.19;
 		color: $total-white;
-		padding-top: 60px;
+		letter-spacing: 0.72px;
 		padding-bottom: 20px;
 	}
 	&__logo--highlight {
@@ -19,7 +19,8 @@
 		font-size: 14px;
 		line-height: 1.71;
 		color: $total-white;
-		padding-bottom: 9px;
+		padding-bottom: 8px;
+		letter-spacing: 0.42px;
 	}
 	&__link {
 		display: block;
@@ -27,7 +28,8 @@
 		font-size: 14px;
 		line-height: 1.71;
 		color: $middle-grey;
-		padding-bottom: 9px;
+		padding-bottom: 8px;
+		letter-spacing: 0.42px;
 		transition-property: color;
 		transition-duration: 250ms;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -37,8 +39,8 @@
 		text-decoration: none;
 		font-size: 14px;
 		line-height: 1.71;
-		letter-spacing: 0.03em;
 		color: $middle-grey;
+		letter-spacing: 0.42px;
 		transition-property: color;
 		transition-duration: 250ms;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -55,65 +57,24 @@
 		color: $brand-color;
 	}
 }
-@media #{$tablet} {
-}
+
 @media #{$desktop} {
 	.footer-contact-block {
 		display: inline-block;
+		text-align: left;
 		margin-right: 70px;
 
 		&__logo {
-			font-family: "Raleway";
-			font-weight: 700;
 			font-size: 26px;
 			line-height: 1.19;
 			color: $total-white;
-			padding-top: 60px;
-			padding-bottom: 20px;
-			margin-right: 70px;
-		}
-		&__logo--highlight {
-			color: $brand-color;
+			letter-spacing: 0.78px;
 		}
 		&__address {
-			font-style: normal;
-			font-size: 14px;
-			line-height: 1.71;
-			color: $total-white;
 			padding-bottom: 9px;
 		}
 		&__link {
-			display: block;
-			text-decoration: none;
-			font-size: 14px;
-			line-height: 1.71;
-			color: $middle-grey;
 			padding-bottom: 9px;
-			transition-property: color;
-			transition-duration: 250ms;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		}
-		&__phonenumber {
-			display: block;
-			text-decoration: none;
-			font-size: 14px;
-			line-height: 1.71;
-			letter-spacing: 0.03em;
-			color: $middle-grey;
-			transition-property: color;
-			transition-duration: 250ms;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		}
-		&__link:hover,
-		&__link:focus,
-		&__link:active {
-			color: $brand-color;
-		}
-
-		&__phonenumber:hover,
-		&__phonenumber:focus,
-		&__phonenumber:active {
-			color: $brand-color;
 		}
 	}
 }
