@@ -5,26 +5,32 @@
 	background-color: $dark-grey;
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
 	align-items: center;
 	justify-content: center;
-	background-image: url(../images/studio.jpg);
+	background-image: url(../images/backgroundMobile@x1.jpg);
 	background-position: center;
 	background-size: cover;
+	background-repeat: no-repeat;
 	height: auto;
+
+	@media (min-device-pixel-ratio: 2),
+		(-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+		background-image: url(../images/backgroundMobile@x2.jpg);
+	}
 	&__shade {
 		width: 100%;
 		background-color: $shade;
 		display: flex;
-		padding-top: 118px;
-		padding-bottom: 198px;
+		padding: 118px 0;
 		flex-direction: column;
 		align-items: center;
 		height: auto;
 	}
 	&__title {
 		font-family: "Roboto";
-		width: 70%;
+		max-width: 365px;
 		margin: 0 auto;
 		font-weight: 900;
 		font-size: 26px;
@@ -33,6 +39,7 @@
 		line-height: 1.36;
 		text-transform: uppercase;
 		color: $total-white;
+		padding-bottom: 30px;
 	}
 
 	&__button {
@@ -51,26 +58,34 @@
 	}
 }
 @media #{$tablet} {
-	.mainpage &__title {
-		width: 70%;
+	.mainpage {
+		background-image: url(../images/backgroundTablet@x1.jpg);
+		@media (min-device-pixel-ratio: 2),
+			(-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(../images/backgroundTablet@x2.jpg);
+		}
 	}
 }
 @media #{$desktop} {
 	.mainpage {
-		max-width: 1600px;
-
+		background-image: url(../images/backgroundDesktop@x1.jpg);
+		@media (min-device-pixel-ratio: 2),
+			(-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(../images/backgroundDesktop@x2.jpg);
+		}
 		&__shade {
-			width: 100%;
-			background-color: $shade;
-			display: flex;
 			flex-direction: column;
 			align-items: center;
-			padding-bottom: 200px;
+			padding: 200px 0;
 			height: auto;
 		}
 		&__title {
+			max-width: 696px;
 			margin: 0;
-			padding: 200px 452px 30px 452px;
 			font-weight: 900;
 			font-size: 44px;
 			text-align: center;

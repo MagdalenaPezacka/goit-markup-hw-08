@@ -27,7 +27,11 @@ svg {
 		overflow-x: scroll;
 	}
 }
-
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
 /*header {
 	max-width: 480px;
 }
