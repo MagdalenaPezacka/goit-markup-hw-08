@@ -10,7 +10,8 @@
 }
 @media #{$tablet} {
 	.main-nav {
-		display: inline-block;
+		display: flex;
+		margin-left: 83px;
 		flex-direction: row;
 		&__list {
 			display: flex;
@@ -139,8 +140,11 @@
 }*/
 @media #{$tablet} {
 	.contacts {
+		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		gap: 10px;
+		justify-content: left;
+		margin-right: auto;
 		&__email-link {
 			font-size: 12px;
 		}
@@ -157,7 +161,7 @@
 }
 @media #{$desktop} {
 	.main-nav {
-		display: inline-flex;
+		display: flex;
 
 		&__link {
 			text-decoration: none;
