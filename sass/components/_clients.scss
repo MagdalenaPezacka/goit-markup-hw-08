@@ -1,5 +1,5 @@
 .clients {
-	width: 100vw;
+	width: 100%;
 	margin: auto;
 	display: flex;
 	justify-content: center;
@@ -28,7 +28,7 @@
 	}
 }
 .client {
-	width: 170px;
+	min-width: calc(100% / 2 - 2 * 15px);
 	height: 92px;
 	padding: 18px 32px 14px 32px;
 	justify-content: center;
@@ -67,7 +67,7 @@
 		&__box {
 			display: flex;
 			margin: 0 auto;
-			width: 1200px;
+			width: 100%;
 			justify-content: space-around;
 			gap: 30px;
 			padding-left: 0;
@@ -86,7 +86,7 @@
 		}
 	}
 	.client {
-		width: 170px;
+		max-width: 170px;
 		height: 92px;
 		padding: 18px 32px 14px 32px;
 		justify-content: center;
