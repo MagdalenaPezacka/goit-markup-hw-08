@@ -1,33 +1,33 @@
 .page-header {
-	display: flex;
 	width: 100%;
 	height: auto;
-	padding: 15px 0;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	text-align: center;
-	border-bottom: 1px solid $almost-grey;
+	margin: 0 auto;
 
-	&__left-side {
-		display: block;
-		width: 100%;
-		justify-content: space-around;
+	&__blocks {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		border-bottom: 1px solid $almost-grey;
 	}
-	&__logo {
-		display: inline-block;
+	&__left-side {
+		display: flex;
+		flex-direction: row;
+		max-width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		text-align: justify;
 	}
 	.logo {
+		padding: 15px 0;
 		display: inline-block;
 		color: $total-black;
-		margin: 0;
-
 		font-family: "Raleway";
 		font-weight: 700;
 		font-size: 24px;
 		line-height: 1.19;
-		align-content: center;
-		background-color: $total-white;
+		letter-spacing: 0.72px;
 		text-decoration: none;
 		&__style {
 			color: $brand-color;
@@ -38,9 +38,21 @@
 		fill: $total-black;
 		background-color: transparent;
 		border: none;
+		padding-right: 15px;
 		&:focus,
 		&:hover {
 			fill: $brand-color;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.main-nav {
+			display: none;
+		}
+	}
+	@media (max-width: 767px) {
+		.contacts {
+			display: none;
 		}
 	}
 }
@@ -52,98 +64,236 @@
 
 @media #{$tablet} {
 	.page-header {
-		height: 80px;
-		padding: 21px 0;
+		&__blocks {
+			padding: 15px 0;
+			justify-content: space-between;
+			align-items: center;
+		}
 		&__left-side {
+			gap: 83px;
+		}
+		&__contacts {
+			display: block;
+			margin-right: 0;
+		}
+		.main-nav {
+			display: block;
+			height: 100%;
+			padding-top: 32px;
+			&__list {
+				display: flex;
+				gap: 60px;
+				justify-content: space-around;
+				align-content: center;
+				list-style-type: none;
+			}
+
+			&__link {
+				display: inline-block;
+				font-family: "Roboto";
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 1.14;
+				letter-spacing: 0.28px;
+				color: $almost-black;
+				padding-bottom: 28px;
+				text-decoration: none;
+				transition-property: color;
+				transition-duration: 250ms;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+
+			&__link:hover,
+			&__link:focus,
+			&__link:active {
+				color: $brand-color;
+			}
+
+			&__list .is-active::after {
+				content: "";
+				display: block;
+				width: auto;
+				height: 4px;
+				border-radius: 2px;
+				background-color: $brand-color;
+			}
+		}
+		.contacts {
 			display: flex;
+			flex-direction: column;
+			align-content: center;
+			gap: 10px;
+			text-align: left;
+
+			&__email-link {
+				font-size: 12px;
+				font-weight: 500;
+				color: $light-grey;
+				letter-spacing: 0.24px;
+				text-decoration: none;
+				cursor: pointer;
+				transition-property: color;
+				transition-duration: 250ms;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			&__email-link:hover,
+			&__email-link:focus {
+				color: $brand-color;
+			}
+			&__email-link-icon {
+				size: calc(width-2px), (height-2px);
+				max-width: 14px;
+				margin-right: 8px;
+				fill: currentColor;
+				cursor: pointer;
+				transition-property: color;
+				transition-duration: 250ms;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			&__phonenumber {
+				font-size: 12px;
+				font-weight: 500;
+				color: $light-grey;
+				letter-spacing: 0.24px;
+				text-decoration: none;
+				cursor: pointer;
+				transition-property: color;
+				transition-duration: 250ms;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			&__phonenumber-icon {
+				size: calc(width-2px), (height-2px);
+				max-width: 10px;
+				fill: currentColor;
+				cursor: pointer;
+				transition-property: color;
+				transition-duration: 250ms;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			&__phonenumber:hover,
+			&__phonenumber:focus,
+			&__phonenumber:active {
+				color: $brand-color;
+			}
 		}
 	}
 }
 @media #{$desktop} {
 	.page-header {
-		display: flex;
-		width: 100%;
-		padding: 2px 0 25px;
-		margin: 0 auto;
-		justify-content: space-between;
-		flex-direction: row;
-		align-items: center;
-		border-bottom: 1px solid $almost-grey;
-		&__logo {
-			display: inline-block;
-			margin: 0;
-			padding-left: 16px;
-			font-family: "Raleway";
-			font-weight: 700;
-			font-size: 26px;
+		&__blocks {
 			padding: 0;
-			line-height: 1.19;
-			color: $total-black;
-			background-color: $total-white;
+			justify-content: space-between;
+			align-items: center;
 		}
-	}
-}
-/*@media (min-width: 768px) {
-	.description {
-		&__item {
-			flex-basis: calc((100% - 1 * 30px) / 4);
+		&__left-side {
+			gap: 93px;
 		}
-	}
-}
+		.logo {
+			font-size: 26px;
+		}
+		&__contacts {
+			display: block;
+			margin-right: 0;
+		}
+		.main-nav {
+			display: block;
+			height: 100%;
+			padding-top: 32px;
+			&__list {
+				display: flex;
+				gap: 46px;
+				justify-content: space-around;
+				align-content: center;
+				list-style-type: none;
+			}
 
-@media (min-width: 1024px) {
-	.description {
-		&__item {
-			flex-basis: calc((100% - 3 * 30px) / 2);
+			&__link {
+				display: inline-block;
+				font-family: "Roboto";
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 1.14;
+				letter-spacing: 0.28px;
+				color: $almost-black;
+				padding-bottom: 28px;
+				text-decoration: none;
+				transition-property: color;
+				transition-duration: 250ms;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+
+			&__link:hover,
+			&__link:focus,
+			&__link:active {
+				color: $brand-color;
+			}
+
+			&__list .is-active::after {
+				content: "";
+				display: block;
+				width: auto;
+				height: 4px;
+				border-radius: 2px;
+				background-color: $brand-color;
+			}
+		}
+		.contacts {
+			display: flex;
+			flex-direction: row;
+			align-content: center;
+			gap: 30px;
+			text-align: left;
+
+			&__email-link {
+				font-size: 12px;
+				font-weight: 500;
+				color: $light-grey;
+				letter-spacing: 0.24px;
+				text-decoration: none;
+				cursor: pointer;
+				transition-property: color;
+				transition-duration: 250ms;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			&__email-link:hover,
+			&__email-link:focus {
+				color: $brand-color;
+			}
+			&__email-link-icon {
+				size: calc(width-2px), (height-2px);
+				max-width: 14px;
+				margin-right: 8px;
+				fill: currentColor;
+				cursor: pointer;
+				transition-property: color;
+				transition-duration: 250ms;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			&__phonenumber {
+				font-size: 12px;
+				font-weight: 500;
+				color: $light-grey;
+				letter-spacing: 0.24px;
+				text-decoration: none;
+				cursor: pointer;
+				transition-property: color;
+				transition-duration: 250ms;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			&__phonenumber-icon {
+				size: calc(width-2px), (height-2px);
+				max-width: 10px;
+				fill: currentColor;
+				cursor: pointer;
+				transition-property: color;
+				transition-duration: 250ms;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			&__phonenumber:hover,
+			&__phonenumber:focus,
+			&__phonenumber:active {
+				color: $brand-color;
+			}
 		}
 	}
 }
-.page-header {
-	display: flex;
-	width: 100%;
-	height: auto;
-	padding: 15px 0;
-	
-	flex-direction: row;
-	align-items: center;
-	text-align: center;
-	border-bottom: 1px solid $almost-grey;
-	&__container {
-		display: inline-flex;
-		width: 100%;
-		margin: 0 auto;
-	}
-	&__left-side {
-		display: block;
-		width: 100%;
-		justify-content: space-around;
-	}
-	&__logo {
-		display: inline-block;
-	}
-	.logo {
-		display: inline-block;
-		color: $total-black;
-		margin: 0;
-
-		font-family: "Raleway";
-		font-weight: 700;
-		font-size: 24px;
-		line-height: 1.19;
-		align-content: center;
-		background-color: $total-white;
-		text-decoration: none;
-		&__style {
-			color: $brand-color;
-		}
-	}
-	.menu-toggle {
-		display: inline-block;
-		fill: $total-black;
-		background-color: transparent;
-		border: none;
-		&:focus,
-		&:hover {
-			fill: $brand-color;
-		}
-	}*/
