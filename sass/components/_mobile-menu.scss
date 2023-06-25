@@ -80,13 +80,6 @@
 	}
 }
 
-/*.menu-container .menu-toggle {
-	position: absolute;
-	top: 16px;
-	right: 16px;
-	color: $total-black;
-}*/
-
 .mobile-menu {
 	display: flexbox;
 	padding: 0;
@@ -119,20 +112,6 @@
 	fill: $brand-color;
 }
 
-/*.menu {
-	display: flex;
-	width: 100%;
-	height: 100%;
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-@media (max-width: 480px) {
-	.menu {
-		display: none;
-	}
-}
-
 .menu .link {
 	padding: 10px;
 	color: inherit;
@@ -143,8 +122,3 @@
 .menu .link:focus {
 	text-decoration: underline;
 }
-*/
-
-/*.menu-toggle-btn {
-	
-}*/

@@ -14,7 +14,7 @@
 	&__left-side {
 		display: flex;
 		flex-direction: row;
-		max-width: 100%;
+		width: 100%;
 		justify-content: space-between;
 		align-items: center;
 		text-align: justify;
@@ -38,7 +38,7 @@
 		fill: $total-black;
 		background-color: transparent;
 		border: none;
-		padding-right: 15px;
+
 		&:focus,
 		&:hover {
 			fill: $brand-color;
