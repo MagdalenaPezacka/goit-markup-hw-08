@@ -59,6 +59,7 @@
 
 @media #{$desktop} {
 	.articles {
+		max-width: 100%;
 		flex-wrap: nowrap;
 		&__item {
 			min-width: calc(100% / 4 - 2 * 10px);
