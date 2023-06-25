@@ -6,7 +6,6 @@
 	&__blocks {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
 		padding-top: 16px;
 		padding-bottom: 16px;
 		border-bottom: 1px solid $almost-grey;
@@ -17,7 +16,6 @@
 		width: 100%;
 		justify-content: space-between;
 		align-items: center;
-		text-align: justify;
 	}
 	.logo {
 		padding: 15px 0;
@@ -66,10 +64,11 @@
 	.page-header {
 		&__blocks {
 			padding: 15px 0;
-			justify-content: space-between;
+
 			align-items: center;
 		}
 		&__left-side {
+			justify-content: left;
 			gap: 83px;
 		}
 		&__contacts {
@@ -124,8 +123,9 @@
 			align-content: center;
 			gap: 10px;
 			text-align: left;
-
+			width: 100%;
 			&__email-link {
+				display: flex;
 				font-size: 12px;
 				font-weight: 500;
 				color: $light-grey;
@@ -151,6 +151,7 @@
 				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 			}
 			&__phonenumber {
+				display: flex;
 				font-size: 12px;
 				font-weight: 500;
 				color: $light-grey;
@@ -162,8 +163,7 @@
 				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 			}
 			&__phonenumber-icon {
-				size: calc(width-2px), (height-2px);
-				max-width: 10px;
+				margin-right: 8px;
 				fill: currentColor;
 				cursor: pointer;
 				transition-property: color;
@@ -182,10 +182,11 @@
 	.page-header {
 		&__blocks {
 			padding: 0;
-			justify-content: space-between;
+
 			align-items: center;
 		}
 		&__left-side {
+			justify-content: left;
 			gap: 93px;
 		}
 		.logo {
@@ -243,8 +244,9 @@
 			align-content: center;
 			gap: 30px;
 			text-align: left;
-
+			width: 100%;
 			&__email-link {
+				display: flex;
 				font-size: 12px;
 				font-weight: 500;
 				color: $light-grey;
@@ -260,9 +262,7 @@
 				color: $brand-color;
 			}
 			&__email-link-icon {
-				size: calc(width-2px), (height-2px);
-				max-width: 14px;
-				margin-right: 8px;
+				margin-right: 10px;
 				fill: currentColor;
 				cursor: pointer;
 				transition-property: color;
@@ -270,6 +270,7 @@
 				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 			}
 			&__phonenumber {
+				display: flex;
 				font-size: 12px;
 				font-weight: 500;
 				color: $light-grey;
@@ -281,8 +282,7 @@
 				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 			}
 			&__phonenumber-icon {
-				size: calc(width-2px), (height-2px);
-				max-width: 10px;
+				margin-right: 10px;
 				fill: currentColor;
 				cursor: pointer;
 				transition-property: color;
