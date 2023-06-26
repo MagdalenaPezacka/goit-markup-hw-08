@@ -19,12 +19,12 @@
 	.newsletter-form {
 		display: flex;
 		flex-direction: column;
-		max-width: 100%;
+		width: 100%;
 		justify-content: center;
 		align-items: center;
 		gap: 20px;
 		&__newsletter-email-box {
-			width: 450px;
+			max-width: 450px;
 			height: 50px;
 			padding-left: 16px;
 			background-color: $dark-grey;
@@ -68,7 +68,15 @@
 		}
 	}
 }
-
+@media #{$tablet} {
+	.footer-newsletter-block {
+		.newsletter-form {
+			&__newsletter-email-box {
+				width: 450px;
+			}
+		}
+	}
+}
 @media #{$desktop} {
 	.footer-newsletter-block {
 		padding-top: 12px;
@@ -83,6 +91,7 @@
 				width: 358px;
 			}
 			&__newsletter-email-box input::placeholder {
+				width: 450px;
 				font-size: 16px;
 				line-height: 1.25;
 				display: flex;
