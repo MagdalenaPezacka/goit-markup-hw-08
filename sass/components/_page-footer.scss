@@ -14,7 +14,7 @@
 }
 @media #{$tablet} {
 	.page-footer__blocks {
-		flex-direction: row;
+		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		.left-side {
