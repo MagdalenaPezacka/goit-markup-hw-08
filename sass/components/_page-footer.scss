@@ -17,6 +17,10 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		.left-side {
+			display: flex;
+			flex-direction: row;
+		}
 	}
 }
 @media #{$desktop} {
@@ -24,5 +28,9 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		.left-side {
+			display: flex;
+			flex-direction: row;
+		}
 	}
 }
