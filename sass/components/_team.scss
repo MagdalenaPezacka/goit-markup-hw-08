@@ -6,6 +6,14 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	@include tablet {
+		justify-content: space-center;
+	}
+	@include desktop {
+		background-color: $almost-white;
+		width: 1200px;
+		margin: 0 auto;
+	}
 
 	&__subtitle {
 		width: 100%;
@@ -16,6 +24,9 @@
 		color: $almost-black;
 		padding-bottom: 50px;
 		margin: 0;
+		@include desktop {
+			font-size: 36px;
+		}
 	}
 	&__members {
 		width: 100%;
@@ -25,6 +36,9 @@
 		justify-content: center;
 		gap: 30px;
 		padding-left: 0;
+		@include tablet {
+			min-width: calc(100% / 2 - 2 * 15px);
+		}
 	}
 }
 .team-part {
@@ -33,6 +47,10 @@
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
+	@include desktop {
+		width: 270px;
+		height: 428px;
+	}
 	&__photo {
 		display: block;
 		width: 100%;
@@ -44,6 +62,26 @@
 			background: url(../images/team/member2Mobile@x2.jpg);
 			background: url(../images/team/member3Mobile@x2.jpg);
 			background: url(../images/team/member4Mobile@x2.jpg);
+		}
+		@include tablet {
+			@media (-webkit-min-device-pixel-ratio: 2),
+				(min-resolution: 192dpi),
+				(min-resolution: 2dppx) {
+				background: url(../images/team/member1Tablet@x2.jpg);
+				background: url(../images/team/member2Tablet@x2.jpg);
+				background: url(../images/team/member3Tablet@x2.jpg);
+				background: url(../images/team/member4Tablet@x2.jpg);
+			}
+		}
+		@include desktop {
+			@media (-webkit-min-device-pixel-ratio: 2),
+				(min-resolution: 192dpi),
+				(min-resolution: 2dppx) {
+				background: url(../images/team/member1Desktop@x2.jpg);
+				background: url(../images/team/member2Desktop@x2.jpg);
+				background: url(../images/team/member3Desktop@x2.jpg);
+				background: url(../images/team/member4Desktop@x2.jpg);
+			}
 		}
 	}
 	&__name {
@@ -73,6 +111,11 @@
 		max-height: 56px;
 		justify-content: center;
 		gap: 10px;
+		@include desktop {
+			margin-bottom: 18px;
+			padding-bottom: 0;
+			justify-content: space-around;
+		}
 	}
 	&__social-icons {
 		width: 44px;
@@ -96,7 +139,7 @@
 		fill: $total-white;
 	}
 }
-@media #{$tablet} {
+/*@media #{$tablet} {
 	.team {
 		display: flex;
 		justify-content: space-center;
@@ -213,4 +256,4 @@
 			fill: $total-white;
 		}
 	}
-}
+}*/

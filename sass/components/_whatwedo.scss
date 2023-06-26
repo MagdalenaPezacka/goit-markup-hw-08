@@ -4,7 +4,7 @@
 		display: none;
 	}
 }
-@media #{$desktop} {
+@include desktop {
 	.whatwedo {
 		width: 100%;
 		padding-bottom: 94px;

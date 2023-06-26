@@ -2,6 +2,11 @@
 	display: block;
 	margin: 0 auto;
 	text-align: center;
+	@include desktop {
+		display: inline-block;
+		text-align: left;
+		margin-right: 70px;
+	}
 	&__logo {
 		font-family: "Raleway";
 		font-weight: 700;
@@ -10,6 +15,10 @@
 		color: $total-white;
 		letter-spacing: 0.72px;
 		padding-bottom: 20px;
+		@include desktop {
+			font-size: 26px;
+			letter-spacing: 0.78px;
+		}
 	}
 	&__logo--highlight {
 		color: $brand-color;
@@ -21,6 +30,9 @@
 		color: $total-white;
 		padding-bottom: 8px;
 		letter-spacing: 0.42px;
+		@include desktop {
+			padding-bottom: 9px;
+		}
 	}
 	&__link {
 		display: block;
@@ -33,6 +45,9 @@
 		transition-property: color;
 		transition-duration: 250ms;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		@include desktop {
+			padding-bottom: 9px;
+		}
 	}
 	&__phonenumber {
 		display: block;
@@ -58,7 +73,7 @@
 	}
 }
 
-@media #{$desktop} {
+/*@media #{$desktop} {
 	.footer-contact-block {
 		display: inline-block;
 		text-align: left;
@@ -77,4 +92,4 @@
 			padding-bottom: 9px;
 		}
 	}
-}
+}*/

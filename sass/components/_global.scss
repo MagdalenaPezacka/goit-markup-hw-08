@@ -39,6 +39,10 @@ section {
 .section {
 	padding-top: 60px;
 	padding-bottom: 60px;
+	@include desktop {
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
 }
 .container {
 	margin: 0 auto;
@@ -46,21 +50,10 @@ section {
 }
 .container {
 	max-width: 480px;
-}
-
-@media #{tablet} {
-	.container {
+	@include tablet {
 		max-width: 768px;
 	}
-}
-@media #{desktop} {
-	.container {
+	@include desktop {
 		max-width: 1200px;
-	}
-}
-@media #{$desktop} {
-	.section {
-		padding-top: 94px;
-		padding-bottom: 94px;
 	}
 }

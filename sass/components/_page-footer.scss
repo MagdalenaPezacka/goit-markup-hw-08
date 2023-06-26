@@ -11,8 +11,28 @@
 	flex-direction: column;
 	margin: 0 auto;
 	justify-content: center;
+	@include tablet {
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	@include desktop {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }
-@media #{$tablet} {
+.left-side {
+	@include tablet {
+		display: flex;
+		flex-direction: row;
+	}
+	@include desktop {
+		display: flex;
+		flex-direction: row;
+	}
+}
+/*@media #{$tablet} {
 	.page-footer__blocks {
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -33,4 +53,4 @@
 			flex-direction: row;
 		}
 	}
-}
+}*/

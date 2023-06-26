@@ -19,6 +19,24 @@
 		(min-resolution: 2dppx) {
 		background-image: url(../images/backgroundMobile@x2.jpg);
 	}
+	@include tablet {
+		background-image: url(../images/backgroundTablet@x1.jpg);
+		@media (min-device-pixel-ratio: 2),
+			(-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(../images/backgroundTablet@x2.jpg);
+		}
+	}
+	@include desktop {
+		background-image: url(../images/backgroundDesktop@x1.jpg);
+		@media (min-device-pixel-ratio: 2),
+			(-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(../images/backgroundDesktop@x2.jpg);
+		}
+	}
 	&__shade {
 		width: 100%;
 		background-color: $shade;
@@ -27,6 +45,9 @@
 		flex-direction: column;
 		align-items: center;
 		height: auto;
+		@include desktop {
+			padding: 200px 0;
+		}
 	}
 	&__title {
 		font-family: "Roboto";
@@ -40,6 +61,11 @@
 		text-transform: uppercase;
 		color: $total-white;
 		padding-bottom: 30px;
+		@include desktop {
+			max-width: 696px;
+			margin: 0;
+			font-size: 44px;
+		}
 	}
 
 	&__button {
@@ -55,9 +81,12 @@
 		font-weight: 700;
 		font-size: 16px;
 		line-height: 1.88;
+		@include desktop {
+			margin: auto;
+		}
 	}
 }
-@media #{$tablet} {
+/*@media #{$tablet} {
 	.mainpage {
 		background-image: url(../images/backgroundTablet@x1.jpg);
 		@media (min-device-pixel-ratio: 2),
@@ -108,4 +137,4 @@
 			line-height: 1.88;
 		}
 	}
-}
+}*/

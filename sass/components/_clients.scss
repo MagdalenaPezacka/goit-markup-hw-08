@@ -4,7 +4,10 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-
+	@include tablet {
+		justify-content: space-center;
+		gap: 30px;
+	}
 	&__subtitle {
 		font-weight: 700;
 		font-size: 28px;
@@ -13,6 +16,9 @@
 		color: $almost-black;
 		padding-bottom: 50px;
 		margin: 0;
+		@include desktop {
+			font-size: 36px;
+		}
 	}
 	&__box {
 		display: flex;
@@ -25,6 +31,12 @@
 		border-radius: 4px;
 		background-repeat: no-repeat;
 		background-size: contain;
+		@include tablet {
+			min-width: calc(100% / 2 - 2 * 15px);
+		}
+		@include desktop {
+			width: 100%;
+		}
 	}
 }
 .client {
@@ -39,7 +51,13 @@
 	transition-property: fill, border, border-radius;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+	@include tablet {
+		min-width: calc(100% / 2 - 2 * 15px);
+	}
+	@include desktop {
+		max-width: 170px;
+		padding: 18px 32px 14px 32px;
+	}
 	&:hover,
 	&:focus {
 		fill: $brand-color;
@@ -47,7 +65,7 @@
 		border-radius: 4px;
 	}
 }
-@media #{$tablet} {
+/*@media #{$tablet} {
 	.clients {
 		display: flex;
 		justify-content: space-center;
@@ -105,4 +123,4 @@
 			border-radius: 4px;
 		}
 	}
-}
+}*/
