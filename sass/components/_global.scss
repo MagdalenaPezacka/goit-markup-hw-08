@@ -41,11 +41,23 @@ section {
 	padding-bottom: 60px;
 }
 .container {
-	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
+.container {
+	max-width: 480px;
+}
 
+@media #{tablet} {
+	.container {
+		max-width: 768px;
+	}
+}
+@media #{desktop} {
+	.container {
+		max-width: 1200px;
+	}
+}
 @media #{$desktop} {
 	.section {
 		padding-top: 94px;
